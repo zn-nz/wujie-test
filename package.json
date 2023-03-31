@@ -1,0 +1,18 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+		"dev:main-vue": "pnpm run -C project/main-vue dev",
+		"dev:main-react": "pnpm run -C project/main-react start",
+		"dev:child1": "pnpm run -C project/child1-app【vue】 dev",
+		"dev:child2": "pnpm run -C project/child2-app【vue】 dev",
+		"dev:child3": "pnpm run -C project/child3-app【react】 start",
+		"dev:child4": "pnpm run -C project/child4-app【angular】 start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

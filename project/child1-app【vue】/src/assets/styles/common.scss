@@ -1,0 +1,298 @@
+/**
+  * 溢出省略号
+  * @param {Number} 行数
+  */
+@mixin ellipsis($rowCount: 1) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	@if $rowCount <=1 {
+		white-space: nowrap;
+	} @else {
+		min-width: 0;
+		display: -webkit-box;
+		-webkit-line-clamp: $rowCount;
+		-webkit-box-orient: vertical;
+	}
+}
+
+@for $i from 1 through 6 {
+	.text-ellipsis-#{$i} {
+		@include ellipsis($i);
+	}
+}
+
+.m-auto {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+.m-l-auto {
+	margin-left: auto !important;
+}
+.m-r-auto {
+	margin-right: auto !important;
+}
+@for $i from 0 through 100 {
+	// 只要双数和能被5除尽的数
+	@if $i % 2==0 or $i % 5==0 {
+		// 得出：margin-30或者m-30
+		.margin-#{$i},
+		.m-#{$i} {
+			margin: $i + px !important;
+		}
+
+		.m-x-#{$i} {
+			margin-left: $i + px !important;
+			margin-right: $i + px !important;
+		}
+
+		.m-y-#{$i} {
+			margin-top: $i + px !important;
+			margin-bottom: $i + px !important;
+		}
+
+		// 得出：padding-30或者p-30
+		.padding-#{$i},
+		.p-#{$i} {
+			padding: $i + px !important;
+		}
+
+		.p-x-#{$i} {
+			padding-left: $i + px !important;
+			padding-right: $i + px !important;
+		}
+
+		.p-y-#{$i} {
+			padding-top: $i + px !important;
+			padding-bottom: $i + px !important;
+		}
+
+		@each $short, $long in l left, t top, r right, b bottom {
+			// 缩写版，结果如： m-l-30
+			// 定义外边距
+			.m-#{$short}-#{$i} {
+				margin-#{$long}: $i + px !important;
+			}
+
+			// 定义内边距
+			.p-#{$short}-#{$i} {
+				padding-#{$long}: $i + px !important;
+			}
+
+			// 完整版，结果如：margin-left-30
+			// 定义外边距
+			.margin-#{$long}-#{$i} {
+				margin-#{$long}: $i + px !important;
+			}
+
+			// 定义内边距
+			.padding-#{$long}-#{$i} {
+				padding-#{$long}: $i + px !important;
+			}
+		}
+	}
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.ju-start {
+	justify-content: flex-start;
+}
+
+.ju-end {
+	justify-content: flex-end;
+}
+
+.ju-center {
+	justify-content: center;
+}
+
+.ju-between {
+	justify-content: space-between;
+}
+
+.ju-around {
+	justify-content: space-around;
+}
+
+.al-base {
+	align-items: baseline;
+}
+
+.al-center {
+	align-items: center;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.al-start {
+	align-items: flex-start;
+}
+
+.al-end {
+	align-items: flex-end;
+}
+
+@mixin flex($num: 1) {
+	flex: $num;
+}
+
+@for $i from 1 through 12 {
+	.flex-#{$i} {
+		@include flex($i);
+	}
+}
+
+@mixin antd-item-label-width($width: 90) {
+	width: $width + px;
+}
+
+// form表单label宽度
+.ant-form {
+	@for $width from 60 to 200 {
+		&.label-width-#{$width} {
+			.ant-form-item-label {
+				@include antd-item-label-width($width);
+			}
+		}
+	}
+
+	.ant-form-item {
+		@for $width from 10 to 200 {
+			&.label-width-#{$width} {
+				.ant-form-item-label {
+					@include antd-item-label-width($width);
+				}
+			}
+		}
+	}
+}
+
+.disabled {
+	cursor: not-allowed;
+}
+
+.pointer {
+	cursor: pointer;
+}
+.warning-tips {
+	color: #e6a23c;
+}
+.link-text {
+	color: var(--el-color-primary);
+	cursor: pointer;
+}
+
+.editable-cell {
+	position: relative;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+.yb-drawer {
+	.filter-container {
+		&::after {
+			content: unset;
+		}
+	}
+}
+.filter-container {
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+	margin-bottom: 12px;
+	&::after {
+		content: "";
+		width: calc(100% + 28px);
+		height: 12px;
+		background: #f5f5f5;
+		position: absolute;
+		bottom: -12px;
+		left: -14px;
+	}
+	.filter-item {
+		margin-right: 12px;
+		margin-bottom: 14px;
+		&.el-input,
+		&.el-select,
+		&.el-cascader,
+		&.el-range-editor {
+			flex: unset;
+			width: 220px;
+			display: inline-flex;
+		}
+		&.el-select {
+			.select-trigger {
+				width: 100%;
+			}
+		}
+		&.el-date-editor--daterange {
+			width: 260px;
+		}
+		&.el-date-editor--datetimerange {
+			width: 360px;
+		}
+		&.el-button {
+			margin-left: 0;
+		}
+	}
+	+ .handle-container,
+	+ .yb-table-content {
+		margin-top: 14px;
+	}
+}
+.handle-container {
+	display: flex;
+	margin-bottom: 16px;
+}
+.yb-content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	flex: 1;
+	overflow: auto;
+	background-color: #fff;
+	box-sizing: border-box;
+	padding: 14px;
+}
+* {
+	&[z-height="100%"] {
+		height: 100% !important;
+	}
+	&[z-width="100%"] {
+		width: 100% !important;
+	}
+	&[z-width="50%"] {
+		width: 50%;
+	}
+}
+.custom-left-title {
+	font-size: 14px;
+	position: relative;
+	padding-left: 8px;
+	font-weight: bold;
+	margin-bottom: 12px;
+
+	&:after {
+		width: 2px;
+		height: 14px;
+		background-color: $sidebarThemeActive;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		content: "";
+	}
+}

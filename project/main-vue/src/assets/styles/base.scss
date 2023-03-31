@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+}
+#app {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+a {
+	text-decoration: none;
+}
+svg {
+	&:focus {
+		outline: none;
+	}
+	&:not(:root) {
+		overflow: unset;
+	}
+}
+
+:focus-visible {
+	outline: none;
+}

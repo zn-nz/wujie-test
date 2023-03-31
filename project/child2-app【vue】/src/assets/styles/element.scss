@@ -1,0 +1,62 @@
+.el-table {
+	--el-table-header-bg-color: #e4e8ed;
+	--el-table-border-color: #ebeef5;
+}
+
+.el-button {
+	&:focus-visible {
+		outline: none !important;
+	}
+	&[import] {
+		// 导入按钮
+		--el-color-primary: #f1b528;
+		--el-color-primary-light-5: #f8da94;
+		--el-color-primary-dark-2: #c19120;
+		--el-button-text-color: var(--el-color-white);
+		--el-button-border-color: #f1b528;
+		--el-button-bg-color: #f1b528;
+		--el-button-hover-text-color: var(--el-color-white);
+		--el-button-hover-border-color: #f5cb69;
+		--el-button-hover-bg-color: #f5cb69;
+	}
+	&[export] {
+		// 导出按钮
+		--el-color-primary: #18a54f;
+		--el-color-primary-light-5: #8cd2a7;
+		--el-color-primary-dark-2: #13843f;
+		--el-button-text-color: var(--el-color-white);
+		--el-button-border-color: #18a54f;
+		--el-button-bg-color: #18a54f;
+		--el-button-hover-text-color: var(--el-color-white);
+		--el-button-hover-border-color: transparent;
+		--el-button-hover-bg-color: rgba(24, 165, 78, 0.8);
+	}
+}
+.el-input-number {
+	&.is-without-controls {
+		.el-input {
+			.el-input__wrapper {
+				padding-left: 11px;
+			}
+			.el-input__inner {
+				text-align: left;
+			}
+		}
+	}
+}
+
+.el-space__item > * {
+	border: 1px solid var(--el-border-color);
+	border-radius: 6px;
+}
+.el-tree {
+	.el-tree-node {
+		white-space: pre-wrap;
+		.el-tree-node__content {
+			height: fit-content;
+			.el-tree-node__label {
+				white-space: pre-wrap;
+			}
+		}
+	}
+}

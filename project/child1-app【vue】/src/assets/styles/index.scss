@@ -1,0 +1,19 @@
+@import "./base.scss";
+
+$systemTheme: var(--systemThemeColor);
+$navbarTheme: var(--navbarThemeColor);
+$sidebarTheme: var(--sidebarThemeColor);
+$sidebarThemeActive: var(--sidebarThemeColorActive);
+$systemThemeActive: var(--systemThemeColorActive);
+$sidebarThemeGroup: #444b51;
+$sidebarThemeBg: #001529;
+$sidebarColor: #555555;
+$navbarColor: var(--navbarColor);
+
+$contentBgColor: var(--contentBgColor);
+
+$headerHeight: 48px;
+$logoWidth: 200px;
+
+@import "./common.scss";
+@import "./element.scss";
