@@ -17,8 +17,13 @@ pnpm i
 ### 运行应用
 
 yarn dev:main-vue 运行基座应用【vue】
+
 yarn dev:main-react 运行基座应用【react】
+
 yarn dev:child1 运行子应用【vue】
+
 yarn dev:child2 运行子应用【vue】
+
 yarn dev:child3 运行子应用【react】
+
 yarn dev:child4 运行子应用【angular】
