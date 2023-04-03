@@ -29,8 +29,7 @@ import { useRoute } from "vue-router";
 import hostMap from "@/constant/host-map";
 import fetch from "@/utils/fetch";
 import WujieVue from "wujie-vue3";
-import { angularAppNames } from "@/constant/micro";
-import { commonProps } from "../constant/micro";
+import { angularAppNames, commonProps } from "@/constant/micro";
 const route = useRoute();
 
 const props = {

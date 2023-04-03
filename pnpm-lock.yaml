@@ -7,7 +7,6 @@ importers:
 
   project/child1-app【vue】:
     specifiers:
-      '@micro-zoe/micro-app': ^0.8.10
       '@vitejs/plugin-vue': ^4.0.0
       element-plus: ^2.3.1
       pinia: ^2.0.32
@@ -19,7 +18,6 @@ importers:
       vue: ^3.2.47
       vue-router: ^4.1.6
     dependencies:
-      '@micro-zoe/micro-app': 0.8.10
       element-plus: 2.3.1_vue@3.2.47
       pinia: 2.0.33_vue@3.2.47
       vue: 3.2.47
@@ -34,7 +32,6 @@ importers:
 
   project/child2-app【vue】:
     specifiers:
-      '@micro-zoe/micro-app': ^0.8.10
       '@vitejs/plugin-vue': ^4.0.0
       element-plus: ^2.3.1
       pinia: ^2.0.32
@@ -45,12 +42,13 @@ importers:
       vite: ^4.1.4
       vue: ^3.2.47
       vue-router: ^4.1.6
+      wujie-vue3: ^1.0.8
     dependencies:
-      '@micro-zoe/micro-app': 0.8.10
       element-plus: 2.3.1_vue@3.2.47
       pinia: 2.0.33_vue@3.2.47
       vue: 3.2.47
       vue-router: 4.1.6_vue@3.2.47
+      wujie-vue3: 1.0.13_vue@3.2.47
     devDependencies:
       '@vitejs/plugin-vue': 4.1.0_vite@4.2.1+vue@3.2.47
       sass: 1.60.0
@@ -2653,14 +2651,14 @@ packages:
   /@babel/runtime/7.12.1:
     resolution: {integrity: sha512-J5AIf3vPj3UwXaAzb5j1xM4WAQDX3EMgemF8rjCP3SoW09LfRKAXQKt6CoVYl230P6iWdRcBbnLDDdnqWxZSCA==}
     dependencies:
-      regenerator-runtime: 0.13.7
+      regenerator-runtime: 0.13.11
+    dev: true
 
   /@babel/runtime/7.21.0:
     resolution: {integrity: sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==}
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
-    dev: false
 
   /@babel/template/7.10.4:
     resolution: {integrity: sha512-ZCjD27cGJFUB6nmCB1Enki3r+L5kJveX9pq1SvAUKoICy6CZ9yD8xO086YXdYhvNjBdnekm4ZnaP5yC8Cs/1tA==}
@@ -3468,10 +3466,6 @@ packages:
 
   /@leichtgewicht/ip-codec/2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
-    dev: false
-
-  /@micro-zoe/micro-app/0.8.10:
-    resolution: {integrity: sha512-Zb1G5UrOAEHhiAlanzHJiBlRFHMd4+C/Q5jkwTM991R7blb1F6uGY47pmcunzHns48Kj6k9v2+CLsozGyhQmyw==}
     dev: false
 
   /@ngtools/webpack/11.0.7_4edicxtsnsgxvfzdurvoj2efj4:
@@ -14793,15 +14787,15 @@ packages:
 
   /regenerator-runtime/0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
-    dev: false
 
   /regenerator-runtime/0.13.7:
     resolution: {integrity: sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==}
+    dev: true
 
   /regenerator-transform/0.15.1:
     resolution: {integrity: sha512-knzmNAcuyxV+gQCufkYcvOqX/qIIfHLv0u5x79kRxuGojfYVky1f15TzZEu2Avte8QGepvUNTnLskf8E6X6Vyg==}
     dependencies:
-      '@babel/runtime': 7.12.1
+      '@babel/runtime': 7.21.0
 
   /regex-not/1.0.2:
     resolution: {integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==}

@@ -8,11 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@micro-zoe/micro-app": "^0.8.10",
     "element-plus": "^2.3.1",
     "pinia": "^2.0.32",
     "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "wujie-vue3": "^1.0.8"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
